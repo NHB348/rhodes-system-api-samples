@@ -46,7 +46,7 @@
     </div>
     <div class="row">
       <label>Reminder: </label>
-      <input type="text" name="event[<%= Rho::RhoEvent::REMINDER %>]" value="<%= @event[Rho::RhoEvent::REMINDER] unless @event.nil? %>" />
+      <input type="number" name="reminder" value="<%=@event[Rho::RhoEvent::REMINDER] unless @event.nil? %>" />
     </div>
     <!-- Recurrency -->
     <div class="row">
