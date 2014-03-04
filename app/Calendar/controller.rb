@@ -64,6 +64,8 @@ class CalendarController < Rho::RhoController
         Rho::RhoEvent::RECURRENCE_END => recurrence_end, 
         Rho::RhoEvent::RECURRENCE_COUNT => recurrence_times }
     end
+    event[Rho::RhoEvent::REMINDER]=  (@params['reminder']).to_i
+    
     puts "event: #{event.inspect}"
     id = event[Rho::RhoEvent::ID]
     if id.nil? or id.empty?
